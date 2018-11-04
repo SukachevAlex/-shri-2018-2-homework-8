@@ -15,4 +15,4 @@ function msToReadableTime(ms) {
     }).join(':');
 }
 
-module.exports = { getDiffBetweenDates, msToReadableTime };
+export { getDiffBetweenDates, msToReadableTime };

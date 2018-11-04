@@ -9,4 +9,4 @@ router
         res.send(msToReadableTime(diff));
     })
 
-module.exports = router;
+module.exports = {router};
