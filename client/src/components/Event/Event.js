@@ -1,4 +1,5 @@
 import {mouseDown, mouseMove, mouseUp} from '../PointerEvents/PointerEvents';
+import eventActions from '../flux/EventActions';
 
 const eventSizes = {
     's': 'event__item_s',
@@ -48,6 +49,10 @@ export function generateEvents(events) {
     } else {
         eventData.remove();
     }
+
+    eventItem.addEventListener('click', function() {
+        eventActions.deleteEvent(icon);
+    });
 
     eventList.appendChild(template);
 }

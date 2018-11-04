@@ -1,7 +1,4 @@
 export default class Dispatcher {
-  _callbacks;
-  _lastId;
-
   constructor() {
     this._callbacks = {};
     this._lastId = 1;
@@ -19,8 +16,8 @@ export default class Dispatcher {
   }
 
   dispatch(payload) {
-    for (let i = 0; i < this._callbacks.length; i++) {
-      this._callbacks[i](payload);
+    for (const id of Object.keys(this._callbacks)) {
+      this._callbacks[id](payload);
     }
   }
 }
