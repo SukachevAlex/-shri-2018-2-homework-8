@@ -1,4 +1,4 @@
-import {mouseDown, mouseMove, mouseUp} from '../PointerEvents/PointerEvents';
+import { mouseDown, mouseMove, mouseUp } from '../PointerEvents/PointerEvents';
 import eventActions from '../flux/EventActions';
 import eventStore from '../flux/EventStore';
 
@@ -64,7 +64,6 @@ export function generateEvents(events) {
         eventActions.toggleEvent(icon);
     });
     eventItem.appendChild(next);
-
 
 
     eventList.appendChild(template);

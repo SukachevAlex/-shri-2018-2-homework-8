@@ -16,7 +16,6 @@ let ctx = null;
 let ctxVolume = null;
 let sources = new Map();
 
-//bad realisation
 export function initAudioVizualizer() {
     canvas = document.createElement('canvas');
     ctx = canvas.getContext('2d');
@@ -115,8 +114,8 @@ function drawVolumeBar() {
 
     ctxVolume.beginPath();
     ctxVolume.lineWidth = canvasVolume.width;
-    ctxVolume.strokeStyle = "#fafafa";
-    ctxVolume.moveTo(canvasVolume.width / 2, canvasVolume.height)
+    ctxVolume.strokeStyle = '#fafafa';
+    ctxVolume.moveTo(canvasVolume.width / 2, canvasVolume.height);
 
     let max = 0;
     dataArray.forEach(element => {
