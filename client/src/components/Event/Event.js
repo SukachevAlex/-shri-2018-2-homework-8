@@ -1,5 +1,6 @@
 import {mouseDown, mouseMove, mouseUp} from '../PointerEvents/PointerEvents';
 import eventActions from '../flux/EventActions';
+import eventStore from '../flux/EventStore';
 
 const eventSizes = {
     's': 'event__item_s',
@@ -50,9 +51,21 @@ export function generateEvents(events) {
         eventData.remove();
     }
 
-    eventItem.addEventListener('click', function() {
+    const close = document.createElement('div');
+    close.className = 'btn_close';
+    close.addEventListener('click', function() {
         eventActions.deleteEvent(icon);
     });
+    eventItem.appendChild(close);
+
+    const next = document.createElement('div');
+    next.className = 'btn_next';
+    next.addEventListener('click', function() {
+        eventActions.toggleEvent(icon);
+    });
+    eventItem.appendChild(next);
+
+
 
     eventList.appendChild(template);
 }

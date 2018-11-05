@@ -1,26 +1,15 @@
 import './style.sass';
-import { generateEvents } from './components/Event/Event';
+import eventActions from './components/flux/EventActions';
+import eventStore from './components/flux/EventStore';
 
 (function() {
-
-    fetch('https://shri-homework-4.herokuapp.com/api/events?limit=11')
-        .then(res => {
-            return res.json();
-        })
-        .then((data) => {
-            initEvents(data);
-        })
-        .catch(err => console.log(err));
+    
+	fetch('https://shri-homework-4.herokuapp.com/api/events?limit=11')
+		.then(res => {
+			return res.json();
+		})
+		.then((data) => {
+			eventActions.loadEvent(data);
+		})
+		.catch(err => console.log(err));
 })();
-
-function supportsTemplate() {
-    return 'content' in document.createElement('template');
-}
-
-function initEvents(data) {
-    if (supportsTemplate) {
-        data.forEach(el => generateEvents(el));
-    } else {
-        console.log('error');
-    }
-}

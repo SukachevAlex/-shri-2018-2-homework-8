@@ -23,7 +23,7 @@
                 background-color: rgba(216,216,216,0.60)
             &::-moz-range-track
                 background-color: rgba(216,216,216,0.60)
-        &::before
+        .btn_next
             content: ""
             display: block
             width: 10px
@@ -36,9 +36,7 @@
             background-position: center
             background-size: 100%
             filter: drop-shadow(0px 0px 12px #000000)
-        &::after
-            content: ""
-            display: block
+        .btn_close
             width: 14px
             height: 14px
             position: absolute
@@ -48,8 +46,11 @@
             background-repeat: no-repeat
             background-position: center
             background-size: 100%
-            filter: drop-shadow(0px 0px 12px #000000)
-   
+        
+
+
+    
+
 .event__item_critical
     .event__bottom-line
         padding-top: 5px
@@ -58,13 +59,7 @@
         background: #DB5341
         border-radius: 20px 20px 0 0
         padding-bottom: 35px
-    &:hover
-        &::before
-            background-image: url("./img/svg/next-white.svg")
-            filter: drop-shadow(0px 0px 5px #000000)
-        &::after
-            background-image: url("./img/svg/cross-white.svg")
-
+    
 .event__item_s
     grid-column: auto / span 2
     @media screen and (max-width : 920px)

@@ -23,10 +23,10 @@ const Actions = {
     });
   },
 
-  loadEvent() {
+  loadEvent(data) {
     Dispatcher.dispatch({
       data,
-      type: ActionTypes.EVENT_DELETE
+      type: ActionTypes.EVENT_LOAD
     });
   }
 }
