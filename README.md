@@ -6,8 +6,6 @@
 
 Запустить проект `npm run start`
 
-Запустить сервер `npm run server`
-
 Собрать проект `npm run build`
 
 Проверка eslint'ом `npm run lint`
