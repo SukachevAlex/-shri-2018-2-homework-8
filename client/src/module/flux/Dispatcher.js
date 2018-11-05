@@ -4,6 +4,10 @@ export default class Dispatcher {
         this._lastId = 1;
     }
 
+    getCallbacs() {
+        return this._callbacks;
+    }
+    
     register(callback) {
         const id = this._lastId++;
         this._callbacks[id] = callback;
