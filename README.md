@@ -10,6 +10,8 @@
 
 Проверка eslint'ом `npm run lint`
 
+Для тестирования `npm run test`
+
 ## Ссылка на проект gh-pages
 
 Выложил проект на gh-pages
